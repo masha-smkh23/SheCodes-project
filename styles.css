@@ -1,0 +1,72 @@
+.anek-tamil {
+  font-family: "Anek Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  width: 500px; /* Adjust the width as needed */
+  margin: 80px auto; /* Center the container */
+  padding: 20px; /* Add some padding inside the container */
+  border: 3px solid #03bb94; /* Create a solid black border */
+  border-radius: 3%;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5); /* Optional: add some shadow for better visibility */
+  background-color: #f9f9f9; /* Optional: set a background color */
+  font-family: "Anek Tamil", sans-serif;
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+body:hover {
+  transform: scale(1.08); /* Scale up the body and its content on hover */
+}
+
+header,
+main,
+footer {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(0, 166, 130);
+}
+
+h2 {
+  font-size: xx-large;
+  color: rgb(0, 166, 130);
+}
+
+.current-location-date {
+  display: flex;
+  justify-content: space-around; /* Adjusts the space between the items */
+}
+
+.Today {
+  margin-top: 30px;
+}
+
+.future-dates1 {
+  display: flex;
+  justify-content: space-evenly; /* Adjusts the space between the items */
+}
+
+.future-dates2 {
+  display: flex;
+  justify-content: space-evenly; /* Adjusts the space between the items */
+}
+
+input[type="search"]:hover {
+  cursor: pointer;
+  border-radius: 3px;
+  border-color: #03bb94;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(178, 238, 229); /* Light blue color on hover */
+  cursor: pointer;
+  border-radius: 3px;
+  border-top-color: #03bb94;
+  border-bottom-color: #03bb94;
+  border-left-color: #03bb94;
+  border-right-color: #03bb94;
+}

@@ -40,18 +40,35 @@ function displayTemperature(response) {
 
 function changeCity() {
   let searchButton = document.querySelector("input[value='Search 🔎']");
+<<<<<<< Updated upstream
   let inputCity = document.getElementById("input-cityName"); 
 
   function fetchWeather() {
     let cityName = inputCity.value.trim(); 
+=======
+  let inputCity = document.getElementById("input-cityName");
+
+  function fetchWeather() {
+    let cityName = inputCity.value.trim();
+    // Check if cityName is empty
+    if (cityName === "") {
+      alert("Please, enter the city"); // Displays the pop-up
+      return; // Stops further execution if no city is entered
+    }
+>>>>>>> Stashed changes
     document.querySelector("h2").innerHTML = cityName.toUpperCase() + " 🏬";
     let apiKey = "4e3fb40e09d54863ac6o4t0243f8a502";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityName}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
   }
 
+<<<<<<< Updated upstream
    // Add event listener for clicking the search button
    searchButton.addEventListener("click", function (event) {
+=======
+  // Add event listener for clicking the search button
+  searchButton.addEventListener("click", function (event) {
+>>>>>>> Stashed changes
     event.preventDefault();
     fetchWeather();
   });

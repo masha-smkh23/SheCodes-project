@@ -6,18 +6,9 @@
 }
 
 body {
-<<<<<<< Updated upstream
-
-  background-color: #c8dfea; /* Optional: set a background color */
-
-}
-
-
-=======
   background-color: #c8dfea; /* Optional: set a background color */
 }
 
->>>>>>> Stashed changes
 .weather-window {
   width: 500px; /* Adjust the width as needed */
   margin: 80px auto; /* Center the container */
@@ -25,24 +16,14 @@ body {
   border: 3px solid #03bb94; /* Create a solid black border */
   border-radius: 3%;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5); /* Optional: add some shadow for better visibility */
-<<<<<<< Updated upstream
-  background-color: white;  /* Optional: set a background color */
-=======
   background-color: white; /* Optional: set a background color */
->>>>>>> Stashed changes
   font-family: "Anek Tamil", sans-serif;
   transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
 .weather-window:hover {
-<<<<<<< Updated upstream
-    transform: scale(1.08); /* Scale up the body and its content on hover */
-  }
-
-=======
   transform: scale(1.08); /* Scale up the body and its content on hover */
 }
->>>>>>> Stashed changes
 
 header,
 main,
@@ -73,7 +54,7 @@ a {
 }
 
 a {
-  color: #03bb94; 
+  color: #03bb94;
 }
 
 .current-location-date {
@@ -102,36 +83,20 @@ a {
 }
 
 #input-cityName {
-<<<<<<< Updated upstream
-  background-color: white;  
-  border-color:rgb(0, 165, 129);   
-  border-radius: 6px; 
-  width: 60%; 
-  padding: 5px; 
-  margin-left: 17px; 
-=======
   background-color: white;
   border-color: rgb(0, 165, 129);
   border-radius: 6px;
   width: 60%;
   padding: 5px;
   margin-left: 17px;
->>>>>>> Stashed changes
 }
 
 #input-button {
   background-color: rgb(0, 166, 130);
-<<<<<<< Updated upstream
-  color: white; 
-  border-color:rgb(0, 165, 129);
-  border-radius: 6px;
-  padding: 5px; 
-=======
   color: white;
   border-color: rgb(0, 165, 129);
   border-radius: 6px;
   padding: 5px;
->>>>>>> Stashed changes
   margin-left: 10px;
 }
 

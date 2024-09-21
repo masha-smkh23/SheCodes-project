@@ -38,38 +38,21 @@ h1 {
 h2 {
   font-size: xx-large;
   color: rgb(0, 166, 130);
-  margin-bottom: 0px;
-}
-
-.description {
-  font-size: 17px;
-  color: #333; /* You can adjust the color here */
-  margin-top: 10px;
-  text-align: left;
-  padding-left: 30px;
+  margin-bottom: 0;
 }
 
 a {
   color: #03bb94;
 }
 
-a {
-  color: #03bb94;
-}
-
-.current-location-date {
+.current-location {
   display: flex;
-  justify-content: space-around; /* Adjusts the space between the items */
-  margin-bottom: 0px;
+  justify-content: space-evenly; /* Adjusts the space between the items */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
 }
 
-.humidity,
-.wind {
-  color: rgb(0, 166, 130);
-}
-
-.Today {
-  margin-top: 30px;
+.weather-details {
+  margin-top: 0; /* Remove any margin from the top to align it properly under the h2 */
 }
 
 .future-dates1 {

@@ -34,7 +34,7 @@ function displayTemperature(response) {
       todayParagraph.innerHTML.split("<br>")[0] + "<br>";
     todayParagraph.innerHTML += `<strong>Temperature:</strong> ⛅ ${currentTemperature}°C`;
   } else {
-    console.error("Temperature data not found");
+    alert("Temperature data not found");
   }
 }
 

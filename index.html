@@ -11,57 +11,43 @@
     <link rel="icon" type="image/x-icon" href="sources/sun.svg">
     <link rel="stylesheet" href="styles.css">
 </head>
-<div class="container">
 <body>
     <div class="weather-window">
     <header>
-    <h1>MÉTÉO</h1>
-<form>
-    <input type="search" placeholder="Enter a city.." autofocus="on" id="input-cityName"/>
-    <input type="submit" value="Search 🔎" id="input-button"/>
+    <h1 class="title">MÉTÉO</h1>
+<form class="search-form" id="search-form">
+    <input type="search" placeholder="Enter a city.." id="city-input" required/>
+    <input type="submit" value="Search 🔎" id="search-button"/>
 </form>
-</header>
+    </header>
     <main>
-        <div class="current-location">
-        <div class="location-info">
-        <h2>LYON 🏬</h2>
-        <p class="weather-details"><strong>Humidity:</strong> 22, <strong>Wind:</strong> 10%</p>
-        </div>
-        <p class="Today"><strong>Today</strong>
-        </div>
-<div class="future-dates1">
-<p><strong>Tomorrow</strong>, 
-</br>
-1st June 18°C</p>
-<p><strong>Sunday</strong>, 
-</br>
-2d June 20°C
-</p>
-<p><strong>Monday</strong>, 
-</br>
-3d June 21°C</p>
-</div>
-<div class="future-dates2">
-<p><strong>Tuesday</strong>, 
-</br>
-31st June 19°C</p>
-<p><strong>Wednesday</strong>, 
-</br>
-31st June 25°C
-</p>
-<p><strong>Thursday</strong>, 
-</br>
-31st June 27°C
-</p>
-</div>
+      <div class="main-section">
+            <div class="city-container">
+        <h2 class="cityDisplayed" id="city"> 🏬</h2>
+          <p class="weather-app-details">
+            <span id="time">Tuesday 15:05, </span>
+          </br>
+            <span id="description">scattered clouds</span>
+            </p>
+            </div>
+            <div class="second-block">
+            <div class="temperature-display">
+            <div class="weather-icon">
+             🌤️
+            </div>
+            <div class="weather-value" id="temperature-value"></div>
+            <div class="weather-unit">°C</div>
+            </div>
+            <div class="weather-details">Humidity: <span id="humidity">22</span>%, Wind: <span id="wind-speed">3.13</span> km/h </div>
+            </div>
+            </div>                  
 </main>
 </br>
 <footer>
-    <p>This <a href="https://github.com/masha-smkh23/SheCodes-project" target="_blank">open-source project</a> is coded by <a href="https://www.shecodesfoundation.org/candidates/mariia-samokhvalova-ukrainian" target="_blank">Mariia S.</a> & hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+    <p>This <a href="https://github.com/masha-smkh23/SheCodes-project" target="_blank">open-source project</a> is coded by <a href="https://github.com/masha-smkh23/" target="_blank">Mariia S.</a> & hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </footer>
 </div>
 <script src="index.js"></script>
 </script>
 </body>
-</div>
 </html>

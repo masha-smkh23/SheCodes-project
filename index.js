@@ -1,6 +1,7 @@
-function updateDateTime() {
-  let now = new Date();
-  let daysOfWeek = [
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -9,68 +10,52 @@ function updateDateTime() {
     "Friday",
     "Saturday",
   ];
-  let currentDay = daysOfWeek[now.getDay()];
-  let currentHours = now.getHours();
-  if (currentHours < 10) {
-    currentHours = `0${currentHours}`;
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
-  let currentMinutes = now.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = `0${currentMinutes}`;
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
-  let todayParagraph = document.querySelector(".Today");
-  todayParagraph.innerHTML = `<strong>${currentDay}</strong>, ${currentHours}:${currentMinutes}<br>`;
+  return `${day}, ${hours}:${minutes}`;
 }
 
-updateDateTime();
-
-function displayTemperature(response) {
-  // Check if response.data.temperature is available
-  if (response.data.temperature && response.data.temperature.current) {
-    let currentTemperature = Math.round(response.data.temperature.current);
-    let todayParagraph = document.querySelector(".Today");
-    // Clear any previous temperature data
-    todayParagraph.innerHTML =
-      todayParagraph.innerHTML.split("<br>")[0] + "<br>";
-    todayParagraph.innerHTML += `<strong>Temperature:</strong> ⛅ ${currentTemperature}°C`;
+function updateWeatherData(response) {
+  if (response.data.temperature) {
+    let temperatureElement = document.querySelector("#temperature-value");
+    let temperature = response.data.temperature.current;
+    let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind-speed");
+    let timeElement = document.querySelector("#time");
+    let date = new Date(response.data.time * 1000);
+    cityElement.innerHTML = response.data.city;
+    descriptionElement.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = response.data.temperature.humidity;
+    windElement.innerHTML = response.data.wind.speed;
+    temperatureElement.innerHTML = Math.round(temperature);
+    timeElement.innerHTML = formatDate(date);
+    console.log(response.data);
   } else {
     alert("Temperature data not found");
   }
 }
 
-function changeCity() {
-  let searchButton = document.querySelector("input[value='Search 🔎']");
-  let inputCity = document.getElementById("input-cityName");
-
-  function fetchWeather() {
-    let cityName = inputCity.value.trim();
-    // Check if cityName is empty
-    if (cityName === "") {
-      alert("Please, enter the city"); // Displays the pop-up
-      return; // Stops further execution if no city is entered
-    }
-    document.querySelector("h2").innerHTML = cityName.toUpperCase() + " 🏬";
-    let apiKey = "4e3fb40e09d54863ac6o4t0243f8a502";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityName}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayTemperature);
-  }
-
-  // Add event listener for clicking the search button
-  searchButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    fetchWeather();
-  });
-
-  // Add event listener for pressing the Enter key
-  inputCity.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      fetchWeather();
-    }
-  });
+function searchCity(city) {
+  let apiKey = "4e3fb40e09d54863ac6o4t0243f8a502";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(updateWeatherData);
 }
 
-changeCity();
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#city-input");
 
-/* axios library to use in ajax to fetch (retrieve data) */
-/* AJAX is used for API data fetch */
+  searchCity(searchInput.value);
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Lyon");

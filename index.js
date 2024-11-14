@@ -36,7 +36,7 @@ function updateWeatherData(response) {
     humidityElement.innerHTML = response.data.temperature.humidity;
     windElement.innerHTML = response.data.wind.speed;
     temperatureElement.innerHTML = Math.round(temperature);
-    timeElement.innerHTML = formatDate(date);
+    timeElement.innerHTML = `<strong>${formatDate(date)}</strong>`;
     iconElement.innerHTML = `<img class="weather-icon" src="${response.data.condition.icon_url}"/>`;
     console.log(response.data);
   } else {

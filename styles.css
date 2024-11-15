@@ -153,6 +153,10 @@ a {
   margin-top: 20px;
 }
 
+.forecast-icon {
+  width: 36px;
+}
+
 input[type="submit"]:hover {
   background-color: rgb(0, 184, 156); /* Light blue color on hover */
   cursor: pointer;

@@ -119,6 +119,15 @@ a {
   margin-left: 10px;
 }
 
+.forecast-temperatures {
+  display: flex;
+}
+
+.forecast-temperature1,
+.forecast-temperature2 {
+  padding: 3px;
+}
+
 .forecast-1,
 .forecast-2,
 .forecast-3,
@@ -150,6 +159,6 @@ input[type="submit"]:hover {
 }
 
 footer {
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.6);
 }

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #c8dfea;
+  background-color: #7d978c;
 }
 
 .weather-window {
@@ -16,7 +16,8 @@ body {
   border: 3px solid #03bb94; /* Create a solid black border */
   border-radius: 3%;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5); /* Optional: add some shadow for better visibility */
-  background-color: white; /* Optional: set a background color */
+  background-color: #343635;
+  /* Optional: set a background color */
   font-family: "Anek Tamil", sans-serif;
   transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
@@ -38,12 +39,12 @@ h2 {
   font-size: xx-large;
   color: rgb(0, 166, 130);
   margin-bottom: 0;
-  margin-left: 50px;
+  margin-left: 45px;
   margin-bottom: 0px;
 }
 
 a {
-  color: #03bb94;
+  color: rgb(0, 166, 130);
 }
 
 .main-section {
@@ -80,12 +81,12 @@ a {
   margin-left: 45px;
   margin-top: 0px;
   padding-top: 0px;
-  color: rgb(81, 81, 81);
+  color: rgb(255, 255, 255);
   font-weight: 300;
 }
 
 .weather-details {
-  color: rgb(81, 81, 81);
+  color: rgb(255, 251, 251);
   font-weight: 300;
   margin-right: 40px;
   margin-top: 0px;
@@ -101,7 +102,7 @@ a {
 }
 
 #city-input {
-  background-color: white;
+  background-color: rgb(238, 247, 245);
   border-radius: 6px;
   border-width: 2px;
   border-color: rgb(0, 165, 129);
@@ -119,6 +120,10 @@ a {
   margin-left: 10px;
 }
 
+#city-input::placeholder {
+  color: rgb(81, 81, 81);
+}
+
 .forecast-temperatures {
   display: flex;
 }
@@ -134,7 +139,7 @@ a {
 .forecast-4,
 .forecast-5 {
   text-align: center;
-  color: rgb(81, 81, 81);
+  color: rgb(255, 254, 254);
   transition: transform 0.2s ease-out;
 }
 
@@ -164,5 +169,5 @@ input[type="submit"]:hover {
 
 footer {
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 254, 254);
 }
